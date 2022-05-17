@@ -4,18 +4,19 @@
     flex-wrap: wrap;
     width: 500px;
     gap: 5px;
+    justify-content: flex-start;
 
 }
 
 .cat{
     color: crimson;
-    width: 10%;
+    width: 200px;
     padding: 10px;
 
 }
 
 .dog{
     color: chartreuse;
-    width: 10%;
+    width: 200px;
     padding: 10px;
 }
