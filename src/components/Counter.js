@@ -2,6 +2,7 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {actions} from "../redux/slices/counter.slice";
 
+
 const Counter = () => {
 
     const {count1, count2} = useSelector(state => state.counterFromStore);

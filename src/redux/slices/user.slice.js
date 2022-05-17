@@ -8,10 +8,12 @@ const userSlice = createSlice({
     initialState,
     reducers:{
         addUser:(state,action)=>{
+
             const {user,zp} = action.payload    //action.payload.user
             const newUser={id: new Date().getTime(),  name:user, zp:zp}
             state.users.push(newUser)
             console.log(action.payload )
+
 
         },
         delUser:(state,action)=>{
