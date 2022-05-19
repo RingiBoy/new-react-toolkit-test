@@ -9,13 +9,13 @@
 
 .cat{
     color: crimson;
-    width: 10%;
+    width: 100px;
     padding: 10px;
 
 }
 
 .dog{
     color: chartreuse;
-    width: 10%;
+    width: 100px;
     padding: 10px;
 }

@@ -17,6 +17,14 @@ const petSlice = createSlice({
             const name = action.payload.name
             const newDog = {id: new Date().getTime(), name};
             state.dogs.push(newDog)
+        },
+        delCat:(state, action)=>{
+            const indexCat = state.cats.findIndex((value => value.id===action.payload.id));
+            state.cats.splice(indexCat,1)
+        },
+        delDog:(state, action)=>{
+            const indexDog = state.dogs.findIndex((value => value.id===action.payload.id));
+            state.dogs.splice(indexDog,1)
         }
     }
 })
