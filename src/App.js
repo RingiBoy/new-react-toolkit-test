@@ -8,6 +8,7 @@ import InputPet from "./components/InputPet";
 import Cats from "./components/Cats";
 import Dogs from "./components/Dogs";
 import css from './App.module.css'
+import AllPets from "./components/AllPets";
 
 
 const App = () => {
@@ -21,6 +22,9 @@ const App = () => {
           <Cats  />
           <Dogs />
       </div>
+        <div>
+            <AllPets/>
+        </div>
     </div>
   );
 };

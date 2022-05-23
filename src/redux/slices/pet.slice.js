@@ -2,7 +2,8 @@ import {createSlice} from "@reduxjs/toolkit";
 
 let initialState= {
     cats:[],
-    dogs:[]
+    dogs:[],
+    all:[]
 };
 const petSlice = createSlice({
     name:'petSlice',
@@ -10,12 +11,14 @@ const petSlice = createSlice({
     reducers:{
         addCat:(state,action)=>{
             const name = action.payload.name
-            const newCat = {id: new Date().getTime(), name};
+            const newCat = {id: new Date().getTime(), name, type:'cat'};
+
             state.cats.push(newCat)
+
         },
         addDog:(state,action)=>{
             const name = action.payload.name
-            const newDog = {id: new Date().getTime(), name};
+            const newDog = {id: new Date().getTime(), name, type:'dog'};
             state.dogs.push(newDog)
         },
         delCat:(state, action)=>{
@@ -25,6 +28,13 @@ const petSlice = createSlice({
         delDog:(state, action)=>{
             const indexDog = state.dogs.findIndex((value => value.id===action.payload.id));
             state.dogs.splice(indexDog,1)
+
+
+
+        },
+        allPets:(state,action)=>{
+            const {cats, dogs} = action.payload
+
         }
     }
 })
